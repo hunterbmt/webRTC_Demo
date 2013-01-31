@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+<h1>This is the webrtc/index.html template</h1>
+<video id="local_video" autoplay=""></video>
+
+<video id="remote_video" autoplay=""></video>
+<input type="button" onclick = "getConnection()"/>
+<script>
+    var host_name = '{{=host}}';
+    var access_token = '{{=access_token}}';
+    var relate_keys = "{{=relate_keys}}";
+    var class_name = '{{=class_name}}';
+</script>
+<script src="{{=URL('static','js/adapter.js')}}"></script>
+<script src="{{=URL('static','js/student_rtc.js')}}"></script>
